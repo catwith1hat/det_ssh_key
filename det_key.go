@@ -14,7 +14,7 @@ import (
 
 func main() {
 	if len(os.Args) < 4 {
-		fmt.Println("Usage: go run main.go <seed> <private_key_file> <public_key_file>")
+		fmt.Println("Usage: det_key <seed> <private_key_file> <public_key_file>")
 		os.Exit(1)
 	}
 
@@ -24,7 +24,7 @@ func main() {
 
 	data, err := ioutil.ReadFile(seedFile)
 	if err != nil {
-		fmt.Println("Error reading private key file:", err)
+		fmt.Println("Error reading seed key file:", err)
 		os.Exit(1)
 	}
 
